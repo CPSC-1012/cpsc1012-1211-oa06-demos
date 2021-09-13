@@ -18,7 +18,7 @@ namespace FahrenheitToCelsius
             //      celsius = (5 / 9) * (fahrenheit - 32)
             double celsius = (5.0 / 9) * (fahrenheit - 32);
 
-            // Step 4: Display the tempature in celsius
+            // Step 4: Display the temperature in celsius
             Console.WriteLine($"Fahrenheit {fahrenheit:F1} is {celsius:F1} celsius.");
 
         }
