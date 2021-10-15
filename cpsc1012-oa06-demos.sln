@@ -33,13 +33,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColumnOutputDemo", "ColumnO
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForLoop1Demo", "ForLoop1Demo\ForLoop1Demo.csproj", "{B549D3A4-809E-427F-A0C0-68D8E9F1E76E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessNumberOneTime", "GuessNumberOneTime\GuessNumberOneTime.csproj", "{32E15E1F-C701-498E-AD76-CFA5E172F226}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessNumberOneTime", "GuessNumberOneTime\GuessNumberOneTime.csproj", "{32E15E1F-C701-498E-AD76-CFA5E172F226}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessNumberUsingWhileLoop", "GuessNumberUsingWhileLoop\GuessNumberUsingWhileLoop.csproj", "{57A882FE-197A-4139-884F-3A648BB26B68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessNumberUsingWhileLoop", "GuessNumberUsingWhileLoop\GuessNumberUsingWhileLoop.csproj", "{57A882FE-197A-4139-884F-3A648BB26B68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessNumberUsingBooleanFlag", "GuessNumberUsingBooleanFlag\GuessNumberUsingBooleanFlag.csproj", "{62B437F2-7E38-4C7A-8AA6-BC83B48E02D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessNumberUsingBooleanFlag", "GuessNumberUsingBooleanFlag\GuessNumberUsingBooleanFlag.csproj", "{62B437F2-7E38-4C7A-8AA6-BC83B48E02D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessNumberUsingDoWhileLoop", "GuessNumberUsingDoWhileLoop\GuessNumberUsingDoWhileLoop.csproj", "{B0635C93-0DFE-4AA0-921C-40D092984E54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessNumberUsingDoWhileLoop", "GuessNumberUsingDoWhileLoop\GuessNumberUsingDoWhileLoop.csproj", "{B0635C93-0DFE-4AA0-921C-40D092984E54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RectangleFilledPattern", "RectangleFilledPattern\RectangleFilledPattern.csproj", "{1F97653D-5B36-4B57-80E4-5EE1E905802A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RectangleHollowPattern", "RectangleHollowPattern\RectangleHollowPattern.csproj", "{EC95A3F7-347F-4F51-B498-1AC0575468A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiplicationTable", "MultiplicationTable\MultiplicationTable.csproj", "{F9819C91-1031-49A7-BA7D-E69544CCB3D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +129,18 @@ Global
 		{B0635C93-0DFE-4AA0-921C-40D092984E54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0635C93-0DFE-4AA0-921C-40D092984E54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0635C93-0DFE-4AA0-921C-40D092984E54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F97653D-5B36-4B57-80E4-5EE1E905802A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F97653D-5B36-4B57-80E4-5EE1E905802A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F97653D-5B36-4B57-80E4-5EE1E905802A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F97653D-5B36-4B57-80E4-5EE1E905802A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC95A3F7-347F-4F51-B498-1AC0575468A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC95A3F7-347F-4F51-B498-1AC0575468A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC95A3F7-347F-4F51-B498-1AC0575468A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC95A3F7-347F-4F51-B498-1AC0575468A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9819C91-1031-49A7-BA7D-E69544CCB3D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9819C91-1031-49A7-BA7D-E69544CCB3D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9819C91-1031-49A7-BA7D-E69544CCB3D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9819C91-1031-49A7-BA7D-E69544CCB3D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
