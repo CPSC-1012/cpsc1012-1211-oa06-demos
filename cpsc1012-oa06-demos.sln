@@ -41,11 +41,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessNumberUsingBooleanFlag
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessNumberUsingDoWhileLoop", "GuessNumberUsingDoWhileLoop\GuessNumberUsingDoWhileLoop.csproj", "{B0635C93-0DFE-4AA0-921C-40D092984E54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RectangleFilledPattern", "RectangleFilledPattern\RectangleFilledPattern.csproj", "{1F97653D-5B36-4B57-80E4-5EE1E905802A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RectangleFilledPattern", "RectangleFilledPattern\RectangleFilledPattern.csproj", "{1F97653D-5B36-4B57-80E4-5EE1E905802A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RectangleHollowPattern", "RectangleHollowPattern\RectangleHollowPattern.csproj", "{EC95A3F7-347F-4F51-B498-1AC0575468A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RectangleHollowPattern", "RectangleHollowPattern\RectangleHollowPattern.csproj", "{EC95A3F7-347F-4F51-B498-1AC0575468A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiplicationTable", "MultiplicationTable\MultiplicationTable.csproj", "{F9819C91-1031-49A7-BA7D-E69544CCB3D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiplicationTable", "MultiplicationTable\MultiplicationTable.csproj", "{F9819C91-1031-49A7-BA7D-E69544CCB3D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CupConverter", "CupConverter\CupConverter.csproj", "{DE65CF5B-D6BD-4D84-928B-EE1A88FD613B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,6 +143,10 @@ Global
 		{F9819C91-1031-49A7-BA7D-E69544CCB3D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9819C91-1031-49A7-BA7D-E69544CCB3D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9819C91-1031-49A7-BA7D-E69544CCB3D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE65CF5B-D6BD-4D84-928B-EE1A88FD613B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE65CF5B-D6BD-4D84-928B-EE1A88FD613B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE65CF5B-D6BD-4D84-928B-EE1A88FD613B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE65CF5B-D6BD-4D84-928B-EE1A88FD613B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
