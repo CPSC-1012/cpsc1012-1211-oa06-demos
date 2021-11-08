@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MP1_Question03
+namespace MP2_Question03
 {
     class Program
     {
@@ -38,6 +38,5 @@ namespace MP1_Question03
             return taxDue;
         }
 
-        
     }
 }

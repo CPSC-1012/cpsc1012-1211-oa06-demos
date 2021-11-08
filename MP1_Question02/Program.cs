@@ -12,13 +12,11 @@ namespace MP1_Question02
             int mark;
             char grade;
             // Prompt and read in the student name and mark
-            //Console.Write("Enter the student name: ");
-            //name = Console.ReadLine();
-            name = PromptForStringValue("Enter the student name: ", 3);
+            Console.Write("Enter the student name: ");
+            name = Console.ReadLine();
 
-            //Console.Write("Enter the student mark: ");
-            //mark = int.Parse(Console.ReadLine());
-            mark = PromptForIntegerValue("Enter the student mark: ");
+            Console.Write("Enter the student mark: ");
+            mark = int.Parse(Console.ReadLine());
 
             // Call the LetterGradeFromMark method to get the grade
             grade = LetterGradeFromMark(mark);
@@ -53,47 +51,6 @@ namespace MP1_Question02
             }
 
             return letterGrade;
-        }
-
-        static int PromptForIntegerValue(string prompt)
-        {
-            int integerValue = 0;
-            bool validInput = false;
-            while (!validInput)
-            {
-                try
-                {
-                    Console.Write(prompt);
-                    integerValue = int.Parse(Console.ReadLine());
-                    validInput = true;
-                }
-                catch
-                {
-                    Console.WriteLine("Invalid input value. You must enter a integer value.");
-                }
-            }
-            return integerValue;
-        }
-
-        static string PromptForStringValue(string prompt, int minLength)
-        {
-            string stringValue = "";
-            bool validInput = false;
-            while (!validInput)
-            {
-                Console.Write(prompt);
-                stringValue = Console.ReadLine();
-                if (stringValue.Length >= minLength)
-                {
-                    validInput = true;
-                }
-                else
-                {
-                    Console.WriteLine($"Invalid input value. Minimum length must be at least {minLength}");
-                }
-
-            }
-            return stringValue;
         }
     }
 }
