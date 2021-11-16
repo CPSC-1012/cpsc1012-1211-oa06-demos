@@ -87,6 +87,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathTutor04", "MathTutor04\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathTutor05", "MathTutor05\MathTutor05.csproj", "{2A756C33-7DB0-4A4B-BF0D-96A074EA18C8}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchDemo", "SwitchDemo\SwitchDemo.csproj", "{70346781-2891-4E49-824A-37E5E9A183D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -261,6 +263,10 @@ Global
 		{2A756C33-7DB0-4A4B-BF0D-96A074EA18C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A756C33-7DB0-4A4B-BF0D-96A074EA18C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A756C33-7DB0-4A4B-BF0D-96A074EA18C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70346781-2891-4E49-824A-37E5E9A183D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70346781-2891-4E49-824A-37E5E9A183D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70346781-2891-4E49-824A-37E5E9A183D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70346781-2891-4E49-824A-37E5E9A183D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
