@@ -89,6 +89,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathTutor05", "MathTutor05\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchDemo", "SwitchDemo\SwitchDemo.csproj", "{70346781-2891-4E49-824A-37E5E9A183D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelArrayDemo_HockeyPlayerStats", "ParallelArrayDemo_HockeyPlayerStats\ParallelArrayDemo_HockeyPlayerStats.csproj", "{46B3AD55-986F-46FC-AB89-BA84913A97F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -267,6 +269,10 @@ Global
 		{70346781-2891-4E49-824A-37E5E9A183D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70346781-2891-4E49-824A-37E5E9A183D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70346781-2891-4E49-824A-37E5E9A183D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46B3AD55-986F-46FC-AB89-BA84913A97F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46B3AD55-986F-46FC-AB89-BA84913A97F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46B3AD55-986F-46FC-AB89-BA84913A97F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46B3AD55-986F-46FC-AB89-BA84913A97F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
