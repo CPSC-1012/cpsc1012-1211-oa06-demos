@@ -36,7 +36,7 @@ namespace ParallelArrayDemo_HockeyPlayerStats
 
                 // Process menu choice
                 menuChoice = int.Parse(Console.ReadLine());
-                switch(menuChoice)
+                switch (menuChoice)
                 {
                     case 1: // Add Player
                         {
@@ -72,7 +72,7 @@ namespace ParallelArrayDemo_HockeyPlayerStats
                         break;
                 }
 
-            } while (menuChoice != ExitProgramChoice);            
+            } while (menuChoice != ExitProgramChoice);
 
         }
 
@@ -114,7 +114,7 @@ namespace ParallelArrayDemo_HockeyPlayerStats
                 {
                     Console.WriteLine($"{nameArray[index],-27} {pointArray[index],6}");
                 }
-            }            
+            }
         }
 
         static int LoadData(string[] nameArray, int[] pointArray)
@@ -141,11 +141,11 @@ namespace ParallelArrayDemo_HockeyPlayerStats
                 recordsRead = index;
                 Console.WriteLine($"Successfully read data from {dataImportFilePath} ");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
-            
+
             return recordsRead;
         }
         static void SaveData(string[] nameArray, int[] pointArray, int arraySize)
@@ -178,7 +178,7 @@ namespace ParallelArrayDemo_HockeyPlayerStats
                     Console.WriteLine(ex.Message);
                 }
             }
-            
+
         }
     }
 }
