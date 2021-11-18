@@ -29,10 +29,11 @@ namespace ParallelArrayDemo_HockeyPlayerStats
                 Console.WriteLine("-------------------");
                 Console.WriteLine(" 1. Add Player");
                 Console.WriteLine(" 2. List Players");
+                Console.WriteLine(" 4. Remove Player");
                 Console.WriteLine("11. Save data to file");
                 Console.WriteLine("12. Load data from file");
                 Console.WriteLine("99. Exit Program");
-                Console.Write("Enter your menu choice:");
+                Console.Write("Enter your menu choice: ");
 
                 // Process menu choice
                 menuChoice = int.Parse(Console.ReadLine());
@@ -48,6 +49,11 @@ namespace ParallelArrayDemo_HockeyPlayerStats
                         {
                             //Console.WriteLine("List Players");
                             ListPlayers(hockeyPlayerNameArray, hockeyPlayerPointArray, playerCount);
+                        }
+                        break;
+                    case 4: // Remove Player
+                        {
+                            playerCount = RemovePlayer(hockeyPlayerNameArray, hockeyPlayerPointArray, playerCount);
                         }
                         break;
                     case 11: // Save data
@@ -76,6 +82,42 @@ namespace ParallelArrayDemo_HockeyPlayerStats
 
         }
 
+        static int RemovePlayer(string[] nameArray, int[] pointArray, int arraySize)
+        {
+            int playerCount = 0;
+
+            if (arraySize > 0)
+            {
+                // Prompt and read in the playerNo to remove
+                ListPlayers(nameArray, pointArray, arraySize);
+                Console.Write("Enter the playerNo to remove: ");
+                int playerNo = int.Parse(Console.ReadLine());
+                int removeIndex = playerNo - 1;
+                // Shift elements start at removeIndex one element up
+                for (int index = removeIndex; index < (arraySize - 1); index++)
+                {
+                    nameArray[index] = nameArray[index + 1];
+                    pointArray[index] = pointArray[index + 1];
+                }
+                // Decrease the array size by 1
+                arraySize--;
+                // Reset the last element value to defaults
+                nameArray[arraySize] = null;
+                pointArray[arraySize] = 0;
+                // Print a message to let the user know the item has been removed
+                Console.WriteLine($"PlayerNo {playerNo} has been removed.");
+
+                // Set playerCount to arraySize
+                playerCount = arraySize;
+            }
+            else
+            {
+                Console.WriteLine("There are no players in the system to remove.");
+            }            
+
+            return playerCount;
+        }
+
         static int AddPlayer(string[] nameArray, int[] pointArray, int arraySize)
         {
             int playerCount = 0;
@@ -102,17 +144,18 @@ namespace ParallelArrayDemo_HockeyPlayerStats
             }
             else
             {
-                /*      123456789012345678901234567 123456
-                 *      Player Name (27)            Points (6)
-                 *      -----------                 ------
-                 *      Ryan Nugent-Hopkins             18
+                /*      12345678    123456789012345678901234567 123456
+                 *      PlayerNo(8) Player Name (27)            Points (6)
+                 *      --------    -----------                 ------
+                 *             1    Ryan Nugent-Hopkins             18
                  *      
                  * */
-                Console.WriteLine($"{"Player Name",-27} {"Points",6}");
-                Console.WriteLine($"{"-----------",-27} {"------",6}");
+                Console.WriteLine();
+                Console.WriteLine($"{"PlayerNo", 8} {"Player Name",-27} {"Points",6}");
+                Console.WriteLine($"{"--------", 8} {"-----------",-27} {"------",6}");
                 for (int index = 0; index < arraySize; index++)
                 {
-                    Console.WriteLine($"{nameArray[index],-27} {pointArray[index],6}");
+                    Console.WriteLine($"{index+1, 8} {nameArray[index],-27} {pointArray[index],6}");
                 }
             }
         }
