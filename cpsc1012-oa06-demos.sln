@@ -85,11 +85,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathTutor03", "MathTutor03\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathTutor04", "MathTutor04\MathTutor04.csproj", "{1307E42F-0B9F-498F-94F2-164F6D8A6ACA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathTutor05", "MathTutor05\MathTutor05.csproj", "{2A756C33-7DB0-4A4B-BF0D-96A074EA18C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathTutor05", "MathTutor05\MathTutor05.csproj", "{2A756C33-7DB0-4A4B-BF0D-96A074EA18C8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchDemo", "SwitchDemo\SwitchDemo.csproj", "{70346781-2891-4E49-824A-37E5E9A183D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelArrayDemo_HockeyPlayerStats", "ParallelArrayDemo_HockeyPlayerStats\ParallelArrayDemo_HockeyPlayerStats.csproj", "{46B3AD55-986F-46FC-AB89-BA84913A97F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParallelArrayDemo_HockeyPlayerStats", "ParallelArrayDemo_HockeyPlayerStats\ParallelArrayDemo_HockeyPlayerStats.csproj", "{46B3AD55-986F-46FC-AB89-BA84913A97F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayProblems2Question1", "ArrayProblems2Question1\ArrayProblems2Question1.csproj", "{E79FC5FB-C099-4075-8C43-C2C0868BD7E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -273,6 +275,10 @@ Global
 		{46B3AD55-986F-46FC-AB89-BA84913A97F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46B3AD55-986F-46FC-AB89-BA84913A97F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46B3AD55-986F-46FC-AB89-BA84913A97F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E79FC5FB-C099-4075-8C43-C2C0868BD7E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E79FC5FB-C099-4075-8C43-C2C0868BD7E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E79FC5FB-C099-4075-8C43-C2C0868BD7E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E79FC5FB-C099-4075-8C43-C2C0868BD7E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
