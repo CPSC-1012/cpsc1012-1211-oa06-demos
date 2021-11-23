@@ -25,19 +25,32 @@ namespace ParallelArrayDemo_HockeyPlayerStats
             do
             {
                 // Display Menu
-                Console.WriteLine("Hockey Player Stats");
-                Console.WriteLine("-------------------");
-                Console.WriteLine(" 1. Add Player");
-                Console.WriteLine(" 2. List Players");
-                Console.WriteLine(" 4. Remove Player");
-                Console.WriteLine(" 5. Remove All");
-                Console.WriteLine("11. Save data to file");
-                Console.WriteLine("12. Load data from file");
-                Console.WriteLine("99. Exit Program");
-                Console.Write("Enter your menu choice: ");
+                //Console.WriteLine("Hockey Player Stats");
+                //Console.WriteLine("-------------------");
+                //Console.WriteLine(" 1. Add Player");
+                //Console.WriteLine(" 2. List Players");
+                //Console.WriteLine(" 4. Remove Player");
+                //Console.WriteLine(" 5. Remove All");
+                //Console.WriteLine("11. Save data to file");
+                //Console.WriteLine("12. Load data from file");
+                //Console.WriteLine("99. Exit Program");
+                //Console.Write("Enter your menu choice: ");
+                const string MenuChoicePrompt = "Hockey Player Stats\n"
+                    + "-------------------\n"
+                    + " 1. Add Player\n"
+                    + " 2. List Players\n"
+                    + " 4. Remove Player\n"
+                    + " 5. Remove All\n"
+                    + "11. Save data to file\n"
+                    + "12. Load data from file\n"
+                    + "99. Exit Program\n"
+                    + "Enter your menu choice: ";
+                int[] AcceptedMenuChoiceArray = {1, 2, 4, 5, 11, 12, 99};
 
                 // Process menu choice
-                menuChoice = int.Parse(Console.ReadLine());
+                //menuChoice = int.Parse(Console.ReadLine());
+                menuChoice = PromptForIntegerRange(MenuChoicePrompt, AcceptedMenuChoiceArray);
+
                 switch (menuChoice)
                 {
                     case 1: // Add Player
@@ -86,8 +99,132 @@ namespace ParallelArrayDemo_HockeyPlayerStats
                         break;
                 }
 
+                Console.WriteLine("Press any key to continue...");
+                Console.ReadKey();
+                Console.Clear();
+
             } while (menuChoice != ExitProgramChoice);
 
+        }
+
+        static string PromptForMinimumLengthString(string prompt, int minLength)
+        {
+            string stringValue = "";
+            bool validInput = false;
+
+            while (!validInput)
+            {
+                Console.Write(prompt);
+                stringValue = Console.ReadLine();
+                if (stringValue.Trim().Length >= minLength)
+                {
+                    validInput = true;
+                }
+                else
+                {
+                    Console.WriteLine($"Invalid input value. Input value must contain at minimum {minLength} characters in length.");
+                }
+            }
+
+            return stringValue;
+        }
+
+        static int PromptForIntegerRange(string prompt, int minValue, int maxValue)
+        {
+            int integerValue = 0;
+            bool validInput = false;
+
+            while (!validInput)
+            {
+                Console.Write(prompt);
+                try
+                {
+                    integerValue = int.Parse(Console.ReadLine());
+                    if (integerValue >= minValue && integerValue <= maxValue)
+                    {
+                        validInput = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Invalid input value. Must be between {minValue} and {maxValue}.");
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+
+            return integerValue;
+        }
+        static int PromptForIntegerZeroOrPositive(string prompt)
+        {
+            int integerValue = 0;
+            bool validInput = false;
+
+            while (!validInput)
+            {
+                Console.Write(prompt);
+                try
+                {
+                    integerValue = int.Parse(Console.ReadLine());
+                    if (integerValue >= 0)
+                    {
+                        validInput = true;
+                    }                                    
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+
+            return integerValue;
+        }
+        static int PromptForIntegerRange(string prompt, int[] acceptedIntegerArray)
+        {
+            int integerValue = 0;
+            bool validInput = false;
+
+            while (!validInput)
+            {
+                Console.Write(prompt);
+                try
+                {
+                    integerValue = int.Parse(Console.ReadLine());
+
+                    for (int index = 0; index < acceptedIntegerArray.Length; index++)
+                    {
+                        if (integerValue == acceptedIntegerArray[index])
+                        {
+                            validInput = true;
+                            index = acceptedIntegerArray.Length;
+                        }
+                    }
+
+                    if (!validInput)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write("Invalid input value. The input value must be one of the following: ");
+                        foreach (int acceptedValue in acceptedIntegerArray)
+                        {
+                            Console.Write($"{acceptedValue},");
+                        }
+                        Console.ForegroundColor = ConsoleColor.Gray;
+                        Console.WriteLine();
+                    }
+
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+
+
+            return integerValue;
         }
 
         static int RemoveAll(string[] nameArray, int[] pointArray)
@@ -103,31 +240,38 @@ namespace ParallelArrayDemo_HockeyPlayerStats
 
         static int RemovePlayer(string[] nameArray, int[] pointArray, int arraySize)
         {
-            int playerCount = 0;
+            int playerCount = arraySize;
 
             if (arraySize > 0)
             {
                 // Prompt and read in the playerNo to remove
                 ListPlayers(nameArray, pointArray, arraySize);
-                Console.Write("Enter the playerNo to remove: ");
-                int playerNo = int.Parse(Console.ReadLine());
-                int removeIndex = playerNo - 1;
-                // Shift elements start at removeIndex one element up
-                for (int index = removeIndex; index < (arraySize - 1); index++)
-                {
-                    nameArray[index] = nameArray[index + 1];
-                    pointArray[index] = pointArray[index + 1];
-                }
-                // Decrease the array size by 1
-                arraySize--;
-                // Reset the last element value to defaults
-                nameArray[arraySize] = null;
-                pointArray[arraySize] = 0;
-                // Print a message to let the user know the item has been removed
-                Console.WriteLine($"PlayerNo {playerNo} has been removed.");
 
-                // Set playerCount to arraySize
-                playerCount = arraySize;
+                //Console.Write("Enter the playerNo to remove: ");
+                //int playerNo = int.Parse(Console.ReadLine());
+                int playerNo = PromptForIntegerRange("Enter the playerNo to remove: ", 0, arraySize);
+
+                if (playerNo != 0)
+                {
+                    int removeIndex = playerNo - 1;
+                    // Shift elements start at removeIndex one element up
+                    for (int index = removeIndex; index < (arraySize - 1); index++)
+                    {
+                        nameArray[index] = nameArray[index + 1];
+                        pointArray[index] = pointArray[index + 1];
+                    }
+                    // Decrease the array size by 1
+                    arraySize--;
+                    // Reset the last element value to defaults
+                    nameArray[arraySize] = null;
+                    pointArray[arraySize] = 0;
+                    // Print a message to let the user know the item has been removed
+                    Console.WriteLine($"PlayerNo {playerNo} has been removed.");
+
+                    // Set playerCount to arraySize
+                    playerCount = arraySize;
+                }
+                
             }
             else
             {
@@ -142,11 +286,14 @@ namespace ParallelArrayDemo_HockeyPlayerStats
             int playerCount = 0;
 
             // Prompt and read in the player name
-            Console.Write("Enter hockey player name: ");
-            nameArray[arraySize] = Console.ReadLine();
+            //Console.Write("Enter hockey player name: ");
+            //nameArray[arraySize] = Console.ReadLine();
+            nameArray[arraySize] = PromptForMinimumLengthString("Enter hockey player name: ", 3);
+
             // Prompt and read in the player points
-            Console.Write("Enter hockey player points: ");
-            pointArray[arraySize] = int.Parse(Console.ReadLine());
+            //Console.Write("Enter hockey player points: ");
+            //pointArray[arraySize] = int.Parse(Console.ReadLine());
+            pointArray[arraySize] = PromptForIntegerZeroOrPositive("Enter hockey player points: ");
             // Increment arraySize
             arraySize++;
             // Set playerCount to arraySize
