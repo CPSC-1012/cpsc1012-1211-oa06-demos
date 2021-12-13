@@ -91,7 +91,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchDemo", "SwitchDemo\Sw
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParallelArrayDemo_HockeyPlayerStats", "ParallelArrayDemo_HockeyPlayerStats\ParallelArrayDemo_HockeyPlayerStats.csproj", "{46B3AD55-986F-46FC-AB89-BA84913A97F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayProblems2Question1", "ArrayProblems2Question1\ArrayProblems2Question1.csproj", "{E79FC5FB-C099-4075-8C43-C2C0868BD7E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArrayProblems2Question1", "ArrayProblems2Question1\ArrayProblems2Question1.csproj", "{E79FC5FB-C099-4075-8C43-C2C0868BD7E2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP_HockeyPlayerStats", "OOP_HockeyPlayerStats\OOP_HockeyPlayerStats.csproj", "{38C64EB6-988F-47FE-960D-17D262BA3DCB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -279,6 +281,10 @@ Global
 		{E79FC5FB-C099-4075-8C43-C2C0868BD7E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E79FC5FB-C099-4075-8C43-C2C0868BD7E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E79FC5FB-C099-4075-8C43-C2C0868BD7E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38C64EB6-988F-47FE-960D-17D262BA3DCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38C64EB6-988F-47FE-960D-17D262BA3DCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38C64EB6-988F-47FE-960D-17D262BA3DCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38C64EB6-988F-47FE-960D-17D262BA3DCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
